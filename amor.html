@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Simpatias Para o Amor - Pai Marcio de Oxóssi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#120505;
+color:#fff;
+overflow-x:hidden;
+}
+
+.container{
+width:100%;
+max-width:1200px;
+margin:auto;
+padding:20px;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:40px 20px;
+background:
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.90)),
+url('https://i.ibb.co/Z6GXstZz/Chat-GPT-Image-17-05-2026-05-56-32.png');
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.book-cover{
+text-align:center;
+}
+
+.book-cover img{
+width:100%;
+max-width:420px;
+border-radius:20px;
+box-shadow:0 0 40px rgba(255,0,0,0.5);
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0px);}
+}
+
+.hero-text h1{
+font-size:3rem;
+line-height:1.1;
+margin-bottom:20px;
+color:#ff3d3d;
+font-weight:800;
+}
+
+.hero-text h2{
+font-size:1.2rem;
+font-weight:400;
+margin-bottom:25px;
+color:#ddd;
+}
+
+.author{
+font-size:1rem;
+margin-bottom:25px;
+color:#ffb3b3;
+font-weight:600;
+}
+
+.description{
+font-size:1.05rem;
+line-height:1.8;
+margin-bottom:30px;
+color:#eee;
+}
+
+.price-box{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+padding:25px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+margin-bottom:30px;
+}
+
+.old-price{
+text-decoration:line-through;
+font-size:1.2rem;
+color:#999;
+margin-bottom:10px;
+}
+
+.new-price{
+font-size:3rem;
+font-weight:800;
+color:#ff4040;
+margin-bottom:10px;
+}
+
+.launch{
+font-size:1rem;
+color:#ffcccc;
+}
+
+.buy-btn{
+display:inline-block;
+width:100%;
+padding:20px;
+text-align:center;
+background:linear-gradient(90deg,#ff0000,#ff4d4d);
+color:#fff;
+font-size:1.2rem;
+font-weight:700;
+text-decoration:none;
+border-radius:15px;
+transition:0.3s;
+box-shadow:0 10px 30px rgba(255,0,0,0.4);
+}
+
+.buy-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 15px 40px rgba(255,0,0,0.6);
+}
+
+.section{
+padding:80px 20px;
+}
+
+.section-title{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:50px;
+color:#ff4040;
+font-weight:800;
+}
+
+.benefits{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1a0909;
+padding:30px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:#ff4040;
+}
+
+.card h3{
+margin-bottom:15px;
+color:#ff4d4d;
+font-size:1.3rem;
+}
+
+.card p{
+line-height:1.7;
+color:#ddd;
+}
+
+.author-section{
+background:#190707;
+}
+
+.author-box{
+max-width:900px;
+margin:auto;
+text-align:center;
+}
+
+.author-box h3{
+font-size:2rem;
+margin-bottom:25px;
+color:#ff4d4d;
+}
+
+.author-box p{
+font-size:1.1rem;
+line-height:1.9;
+color:#eee;
+}
+
+.comments{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.comment{
+background:#1b0a0a;
+padding:25px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.comment strong{
+color:#ff6666;
+display:block;
+margin-bottom:10px;
+}
+
+.comment p{
+color:#ddd;
+line-height:1.7;
+}
+
+.delivery{
+background:#140606;
+text-align:center;
+padding:70px 20px;
+}
+
+.delivery p{
+max-width:800px;
+margin:auto;
+font-size:1.1rem;
+line-height:1.9;
+color:#eee;
+}
+
+.footer-buy{
+padding:60px 20px;
+text-align:center;
+background:#090202;
+}
+
+.footer-buy h2{
+font-size:2.8rem;
+margin-bottom:20px;
+color:#ff3d3d;
+}
+
+.footer-buy p{
+margin-bottom:35px;
+font-size:1.1rem;
+color:#ddd;
+}
+
+@media(max-width:900px){
+
+.hero-content{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:2.3rem;
+}
+
+.new-price{
+font-size:2.5rem;
+}
+
+.section-title{
+font-size:2rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="book-cover">
+<img src="https://i.ibb.co/Z6GXstZz/Chat-GPT-Image-17-05-2026-05-56-32.png" alt="Livro Simpatias Para o Amor">
+</div>
+
+<div class="hero-text">
+
+<h1>SIMPATIAS PARA O AMOR</h1>
+
+<h2>
+Descubra simpatias poderosas, rituais ancestrais e segredos espirituais
+para abrir caminhos no amor, fortalecer relacionamentos e atrair felicidade amorosa.
+</h2>
+
+<div class="author">
+Pai Marcio de Oxóssi • O Rei das Simpatias
+</div>
+
+<p class="description">
+Um livro digital exclusivo reunindo anos de experiência espiritual,
+ensinamentos tradicionais da Umbanda, Quimbanda e Magia Natural.
+Aprenda simpatias populares, adoçamentos, abertura de caminhos,
+rituais amorosos e práticas espirituais ensinadas por um dos maiores
+criadores de conteúdo espiritual do Brasil.
+</p>
+
+<div class="price-box">
+
+<div class="old-price">
+De R$57,90
+</div>
+
+<div class="new-price">
+R$17,90
+</div>
+
+<div class="launch">
+🔥 Valor promocional de estreia por tempo limitado
+</div>
+
+</div>
+
+<a class="buy-btn" href="https://pay.wiapy.com/PXEE8VJVt4" target="_blank">
+QUERO RECEBER MEU LIVRO AGORA
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+O QUE VOCÊ VAI ENCONTRAR
+</h2>
+
+<div class="benefits">
+
+<div class="card">
+<h3>❤️ Simpatias Amorosas</h3>
+<p>
+Aprenda simpatias populares para amor, reconciliação,
+aproximação, união de casal e fortalecimento amoroso.
+</p>
+</div>
+
+<div class="card">
+<h3>🔮 Rituais Espirituais</h3>
+<p>
+Práticas tradicionais transmitidas através da Umbanda,
+Quimbanda e Magia Natural.
+</p>
+</div>
+
+<div class="card">
+<h3>🔥 Adoçamentos</h3>
+<p>
+Métodos espirituais para harmonizar energias,
+adoçar sentimentos e fortalecer conexões amorosas.
+</p>
+</div>
+
+<div class="card">
+<h3>🏹 Abertura de Caminhos</h3>
+<p>
+Simpatias para desbloquear caminhos amorosos,
+atrair felicidade e melhorar sua energia espiritual.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section author-section">
+
+<div class="container">
+
+<div class="author-box">
+
+<h3>QUEM É PAI MARCIO DE OXÓSSI?</h3>
+
+<p>
+Pai Marcio de Oxóssi é conhecido nacionalmente como
+“O Rei das Simpatias”.
+Foi um dos primeiros Pais de Santo de Fortaleza a levar
+conhecimento espiritual para a internet e para o YouTube,
+iniciando seu trabalho digital em 2015.
+<br><br>
+Com mais de 18 anos de experiência espiritual,
+vem de uma família tradicional de Umbanda e Quimbanda,
+compartilhando ensinamentos sobre simpatias,
+rituais, espiritualidade, magia natural e orientação espiritual.
+<br><br>
+Milhares de pessoas acompanham seu trabalho diariamente
+em busca de ajuda espiritual, abertura de caminhos,
+fortalecimento energético e felicidade amorosa.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+COMENTÁRIOS DE LEITORES
+</h2>
+
+<div class="comments">
+
+<div class="comment">
+<strong>⭐ Fernanda M.</strong>
+<p>
+“Livro muito bonito e bem explicado.
+As simpatias são simples e fáceis de fazer.
+Gostei demais.”
+</p>
+</div>
+
+<div class="comment">
+<strong>⭐ Juliana R.</strong>
+<p>
+“Já acompanho o Pai Marcio no YouTube há anos.
+O conteúdo desse livro ficou incrível.”
+</p>
+</div>
+
+<div class="comment">
+<strong>⭐ Carlos A.</strong>
+<p>
+“Material muito organizado e profissional.
+Vale muito mais do que o valor cobrado.”
+</p>
+</div>
+
+<div class="comment">
+<strong>⭐ Amanda S.</strong>
+<p>
+“Recebi o PDF no email logo após a compra.
+Muito fácil de acessar no celular.”
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="delivery">
+
+<div class="container">
+
+<h2 class="section-title">
+ENTREGA IMEDIATA
+</h2>
+
+<p>
+Após a confirmação da compra, você receberá automaticamente
+no seu e-mail o acesso completo ao livro digital,
+incluindo o link do flipbook online e também o PDF para baixar
+e acessar quando quiser pelo celular, computador ou tablet.
+</p>
+
+</div>
+
+</section>
+
+<section class="footer-buy">
+
+<div class="container">
+
+<h2>
+COMECE SUA JORNADA ESPIRITUAL HOJE
+</h2>
+
+<p>
+Aproveite o valor promocional de estreia
+e tenha acesso imediato ao livro digital.
+</p>
+
+<a class="buy-btn" href="https://pay.wiapy.com/PXEE8VJVt4" target="_blank">
+COMPRAR AGORA POR R$17,90
+</a>
+
+</div>
+
+</section>
+
+</body>
+</html>
